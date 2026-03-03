@@ -1,0 +1,480 @@
+/* General Body and Container Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            margin: 0;
+            /*overflow: hidden; /* Prevent body scroll when modal is open */
+            flex-direction: column; /* Allow stacking of elements if needed */
+            gap: 1rem; /* Space between the new box and the button */
+        }
+	.act-button{
+            display:inline;
+            font-size:20px;
+	    color: white;
+            margin-top:-15px;
+        }
+	.home-button {
+            background-color: green;
+            color: white;
+            font-weight: 700;
+            padding: 5px 5px;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 300ms ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+	    text-decoration: none;
+        }
+        .home-button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+        .home-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
+        }
+
+
+        /* New Box Styling */
+        .new-box {
+            width: 680px;
+            height: 80px;
+            margin-top:-15px;
+            background-color: #ffffff; /* A light grey background for visibility */
+            border: 1px solid #ccc;
+            border-radius: 0;
+            display: flex; /* Changed from column to row for inline content */
+            /*flex-direction: row; /* Display content horizontally */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            padding: 1rem; /* Reverted padding here */
+            font-size: 1.2rem; /* Initial font size, will be overwritten by JS */
+            color: #333;
+            border: 1px solid black;
+            overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+            flex-wrap: nowrap; /* Prevent wrapping to new lines */
+            margin-bottom: 1rem; /* Added space below this box */
+        }
+        /* Style for spans inside new-box - REMOVED margin-right here */
+        .new-box span {
+            display: inline; /* Keep text inline */
+            white-space: nowrap; /* Prevent text from wrapping within a span */
+            line-height: 1.3;
+        }
+        /* Styling for the duplicated boxes below */
+        .new-box2, .new-box3, .new-box4 {
+            width: 680px;
+            height: 80px;
+            margin-top: -32px; /* Adjust as needed for spacing between boxes */
+            background-color: #ffffff;
+            border: 1px solid black;
+            border-radius: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem; /* Reverted padding here */
+            font-size: 1.2rem;
+            color: #333;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            margin-bottom: 1rem; /* Added space below these boxes */
+        }
+	.new-box3{
+	    margin-top: -25px;
+}
+
+        .part-type,
+	.part-type2 {
+            width: 712px;
+            height: 90px;
+            margin-top: -32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            border-radius: 0; /* Rounded bottom corners */
+            margin-bottom: 1rem; /* Added space below these labels */
+        }
+	
+        .part-type {
+            background-color: yellow; /* yellow-300 */
+	    font-size: 50px;
+            color: #000000;
+        }
+
+        .part-type2 {
+            background-color: yellow; /* purple-600 #6b21a8*/
+	    font-size: 50px;
+            color: #000000;
+        }
+	.new-box2,
+	.new-box4{
+	    display: inline;
+	    border-top: 1px solid black;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+            -moz-transform: scale(-1, -1);
+            -webkit-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+}
+	.part-type2,
+	.part-type4 {
+            display: inline;
+            font-size: 50px;
+            font-style: bold;
+	    border-top: 1px solid black;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+            -moz-transform: scale(-1, -1);
+            -webkit-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+	}
+
+        /* Font size selector above new-box */
+        .display-box-font-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top:-15px;
+            margin-bottom: 0.5rem; /* Space between selector and box */
+        }
+        .display-box-font-control label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        .display-box-font-control select {
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            outline: none;
+            transition: all 200ms ease-in-out;
+            font-size: 0.9rem;
+            color: #374151;
+            background-color: #ffffff;
+        }
+        .display-box-font-control select:focus {
+            box-shadow: 0 0 0 2px #9ca3af;
+            border-color: transparent;
+        }
+
+
+        /* Open Form Button Styling */
+        .open-form-button {
+            background-color: #4c51bf; /* A nice blue */
+            color: #ffffff;
+            font-weight: 500;
+            padding: 5px 5px;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 300ms ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .open-form-button:hover {
+            background-color: #3e44a1;
+            transform: scale(1.05);
+        }
+        .open-form-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
+        }
+        /* print button */
+        .print-button {
+            background-color: green;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 5px 5px;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 300ms ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .print-button:hover {
+            background-color: #3e44a1;
+            transform: scale(1.05);
+        }
+        .print-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
+        }
+
+        /* Modal Overlay Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* Ensure it's on top */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Modal Content (the form itself) Styles */
+        .modal-content {
+            background-color: yellow;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
+              0 5px 10px rgba(0, 0, 0, 0.1);
+            max-width: 48rem;
+            width: 90%; /* Adjust width for responsiveness */
+            max-height: 90vh; /* Limit height to prevent overflow on smaller screens */
+            overflow-y: auto; /* Enable scrolling for modal content if it overflows */
+            position: relative; /* For close button positioning */
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Close Button for Modal */
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #4a5568; /* gray-700 */
+            cursor: pointer;
+            padding: 0.2rem;
+            line-height: 1;
+            transition: color 0.2s ease-in-out;
+        }
+        .modal-close-button:hover {
+            color: #1a202c; /* gray-900 */
+        }
+
+        /* Existing Styles for the Form Content */
+        .main-container {
+            padding: 0;
+            box-shadow: none;
+            width: 100%;
+            background-color:yellow;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .input-group label {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .input-flex-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .input-field {
+            flex: 1;
+            padding: 0.75rem;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 0.5rem;
+            outline: none;
+            transition-property: all;
+            transition-duration: 200ms;
+            font-size: 1.125rem;
+            color: #374151;
+        }
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--focus-ring-color);
+            border-color: transparent;
+        }
+
+        .input-group.blue {
+            background-color: #eff6ff;
+        }
+        .input-group.blue label {
+            color: #1d4ed8;
+        }
+        .input-group.blue .input-field {
+            border-color: #93c5fd;
+        }
+        .input-group.blue .input-field:focus {
+            --focus-ring-color: #60a5fa;
+        }
+        .input-group.blue .color-picker {
+            border-color: #93c5fd;
+        }
+
+        .input-group.green {
+            background-color: #ecfdf5;
+        }
+        .input-group.green label {
+            color: #047857;
+        }
+        .input-group.green .input-field {
+            border-color: #a7f3d0;
+        }
+        .input-group.green .input-field:focus {
+            --focus-ring-color: #34d399;
+        }
+        .input-group.green .color-picker {
+            border-color: #a7f3d0;
+        }
+
+        .input-group.purple {
+            background-color: #f3e8ff;
+        }
+        .input-group.purple label {
+            color: #7e22ce;
+        }
+        .input-group.purple .input-field {
+            border-color: #d8b4fe;
+        }
+        .input-group.purple .input-field:focus {
+            --focus-ring-color: #a78bfa;
+        }
+        .input-group.purple .color-picker {
+            border-color: #d8b4fe;
+        }
+
+        .input-group.yellow {
+            background-color: #fffbeb;
+        }
+        .input-group.yellow label {
+            color: #b45309;
+        }
+        .input-group.yellow .input-field {
+            border-color: #fcd34d;
+        }
+        .input-group.yellow .input-field:focus {
+            --focus-ring-color: #fbbf24;
+        }
+        .input-group.yellow .color-picker {
+            border-color: #fcd34d;
+        }
+
+        .color-picker {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.25rem;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+        .color-picker::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+        .color-picker::-webkit-color-swatch {
+            border: none;
+            border-radius: 0.375rem;
+        }
+        .color-picker::-moz-color-swatch-wrapper {
+            padding: 0;
+        }
+        .color-picker::-moz-color-swatch {
+            border: none;
+            border-radius: 0.375rem;
+        }
+
+        /* Insert Button Styling */
+        .insert-button {
+            background-color: #10b981; /* Green color */
+            color: #ffffff;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 300ms ease-in-out;
+            border: none;
+            cursor: pointer;
+            font-size: 1.125rem;
+            margin-top: 2rem; /* Add some space above the button */
+            align-self: center; /* Center the button in the column layout */
+            width: auto; /* Adjust width based on content */
+            min-width: 150px; /* Minimum width for better appearance */
+        }
+        .insert-button:hover {
+            background-color: #059669; /* Darker green on hover */
+            transform: scale(1.05);
+        }
+        .insert-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Error message styling */
+        .error-message {
+            color: #ef4444; /* red-500 */
+            font-size: 0.875rem; /* text-sm */
+            margin-top: 0.5rem; /* mt-2 */
+            display: block; /* Ensure it takes its own line */
+        }
+	
+        /* Print Specific Styles */
+        
+	@media print {
+            .modal-overlay {
+                display: none !important;
+            }
+            body > *:not(.display-box-print-area) { /* Hide all except print area containers */
+                display: none !important;
+            }
+           
+            .display-box-font-control {
+                display: none !important; /* Hide font size selector during print */
+            }
+        }
+        

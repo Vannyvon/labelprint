@@ -1,0 +1,110 @@
+<html>
+<head></head>
+<title>Labe Form</title>
+<style>
+	body{
+		background-color:#ffffff;
+		background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+		margin:0;
+		padding:0;
+}
+h1{
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  min-height: calc(20vh - 16px);
+  background: white;
+  position: relative;
+  background: #171717;
+  color: #000;
+}
+
+h1:before{
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(#f70000, #f89200, #f8f501, #038f00,#0168f8, #a200f7);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 90%;
+  line-height: 0.9;
+  clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  animation: swing 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swing{
+  0%{
+     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)
+    clip-path: ellipse(120px 120px at -2.54% -9.25%)
+  }
+  50%{
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+
+  }
+  100%{
+     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
+.chose, .chose1{
+	display:flex;
+	font-size:40px;
+	justify-content:center;
+	padding:30px;
+	
+}
+.chose div{
+	padding:20px;
+	border:0px solid black;
+	box-shadow: 0 4px 8px 0 rgb(0 0 0 / 47%), 0px 0px 8px 10px rgb(0 0 0 / 19%);
+	border-radius: 10px;
+}
+.box1{
+	background-color:yellow;
+	margin-right:10px;
+}
+.box2{
+	background-color:rgb(107, 33, 168);
+	margin-left:10px;
+}
+.chose a{
+	text-decoration:none;
+	color:black;
+}
+.chose1 div{
+	padding:20px;
+	border:0px solid black;
+	box-shadow: 0 4px 8px 0 rgb(0 0 0 / 47%), 0px 0px 8px 10px rgb(0 0 0 / 19%);
+	border-radius: 10px;
+	background-color:#92db8f;
+}
+.box{
+	height:50px;
+	width:250px;
+	background-color:#92db8f;
+	border-radius: 10px;
+	border:0.5px solid black;
+	font-size: 20px;
+}
+</style>
+<body>
+	<h1 data-text="LABEL FORM">LABEL FORM</h1>
+	<div class="chose">
+		<div class="box1"><a href="file:///G:/Shared%20drives/7K13-BEARING-Div/VANNY/label%20web/stainless.html">STAINLESS</a></div>
+		<div class="box2"><a href="file:///G:/Shared%20drives/7K13-BEARING-Div/VANNY/label%20web/chrome.html">CHROME</a></div>
+	</div>
+	<div class="chose1">
+		<button class="box">Grease Label</button>
+		<button class="box">Table Label</button>
+	</div>
+</body>
+</html>

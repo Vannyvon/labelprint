@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chrome.css" />
+    <title>CHROME LABEL</title>
+  </head>
+  <body>
+    <div class="act-button">
+      <button class="home-button">
+        <a
+          href="file:///G:/Shared%20drives/7K13-BEARING-Div/VANNY/label%20web/home.html"
+          >Home</a
+        >
+      </button>
+      <button id="openFormButton" class="open-form-button">
+        Open the Form
+      </button>
+      <button id="pprint" onClick="window.print()" class="print-button">
+        Print
+      </button>
+    </div>
+    <div class="display-box-font-control">
+      <label for="displayBoxFontSize" style="color: black">Font Size:</label>
+      <select id="displayBoxFontSize">
+        <!-- Options from 10px to 72px -->
+        <option value="10px">10px</option>
+        <option value="12px">12px</option>
+        <option value="14px">14px</option>
+        <option value="16px">16px</option>
+        <option value="18px">18px</option>
+        <option value="20px">20px</option>
+        <option value="22px">22px</option>
+        <option value="24px">24px</option>
+        <option value="26px">26px</option>
+        <option value="28px">28px</option>
+        <option value="30px">30px</option>
+        <option value="32px">32px</option>
+        <option value="34px">34px</option>
+        <option value="36px">36px</option>
+        <option value="38px">38px</option>
+        <option value="40px">40px</option>
+        <option value="42px">42px</option>
+        <option value="44px">44px</option>
+        <option value="46px">46px</option>
+        <option value="48px">48px</option>
+        <option value="50px">50px</option>
+        <option value="52px">52px</option>
+        <option value="54px">54px</option>
+        <option value="56px">56px</option>
+        <option value="58px">58px</option>
+        <option value="60px">60px</option>
+        <option value="62px">62px</option>
+        <option value="64px">64px</option>
+        <option value="66px">66px</option>
+        <option value="68px">68px</option>
+        <option value="70px">70px</option>
+        <option value="72px">72px</option>
+      </select>
+    </div>
+    <div id="sample">
+      <input type="checkbox" id="sampleCheckbox" />
+      <label id="textSample">SAMPLE CHROME PART (មុខងារបានដំណើរការ)</label>
+    </div>
+    <div id="displayBox" class="new-box display-box-print-area">
+      <!-- Content from form inputs will be displayed here -->
+    </div>
+    <div class="part-type display-box-print-area" id="typep">CHROME PART</div>
+    <div class="part-type2 display-box-print-area" id="typep1">CHROME PART</div>
+    <div id="displayBox2" class="new-box2 display-box-print-area">
+      <!-- Content from form inputs will be displayed here -->
+    </div>
+
+    <div id="displayBox3" class="new-box3 display-box-print-area">
+      <!-- Content from form inputs will be displayed here -->
+    </div>
+    <div class="part-type display-box-print-area" id="typep2">CHROME PART</div>
+    <div class="part-type2 display-box-print-area" id="typep3">CHROME PART</div>
+    <div id="displayBox4" class="new-box4 display-box-print-area">
+      <!-- Content from form inputs will be displayed here -->
+    </div>
+
+    <div id="formModal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="closeFormButton" class="modal-close-button">&times;</button>
+        <div class="main-container">
+          <h1>CHROME FORM</h1>
+
+          <!-- GAUGING Checkbox - MOVED HERE -->
+          <div class="gauging-option">
+            <input type="checkbox" id="gaugingCheckbox" />
+            <label for="gaugingCheckbox">GAUGING,MATCHING,BALL,RTNR</label>
+          </div>
+          <!-- Input Box 1: PART NAME -->
+          <div class="input-group blue">
+            <label for="partName">PART NAME</label>
+            <div class="input-flex-container">
+              <input
+                type="text"
+                id="partName"
+                placeholder="Enter part name..."
+                class="input-field"
+              />
+              <input
+                type="color"
+                id="partNameColor"
+                value="#1a56db"
+                class="color-picker"
+              />
+            </div>
+          </div>
+
+          <!-- Input Box 2: SPEC -->
+          <div class="input-group green">
+            <label for="spec">SPEC</label>
+            <div class="input-flex-container">
+              <input
+                type="text"
+                id="spec"
+                placeholder="Enter specifications..."
+                class="input-field"
+              />
+              <input
+                type="color"
+                id="specColor"
+                value="#059669"
+                class="color-picker"
+              />
+            </div>
+            <span id="specError" class="error-message" style="display: none"
+              >Please remove grease type</span
+            >
+          </div>
+
+          <!-- New Input Box: GREASE TYPE -->
+          <div class="input-group purple">
+            <label for="greaseType">GREASE TYPE</label>
+            <div class="input-flex-container">
+              <input
+                type="text"
+                id="greaseType"
+                placeholder="Enter grease type..."
+                class="input-field"
+              />
+              <input
+                type="color"
+                id="greaseTypeColor"
+                value="#7e22ce"
+                class="color-picker"
+              />
+            </div>
+          </div>
+
+          <!-- Input Box 3: W.O.S -->
+          <div class="input-group yellow">
+            <label for="wos">W.O.S</label>
+            <div class="input-flex-container">
+              <input
+                type="text"
+                id="wos"
+                placeholder="Enter W.O.S. details..."
+                class="input-field"
+              />
+              <input
+                type="color"
+                id="wosColor"
+                value="#d97706"
+                class="color-picker"
+              />
+            </div>
+          </div>
+
+          <!-- New Insert Button -->
+          <button id="insertButton" class="insert-button">Insert</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Modal elements
+      const openFormButton = document.getElementById("openFormButton");
+      const formModal = document.getElementById("formModal");
+      const closeFormButton = document.getElementById("closeFormButton");
+      const displayBox = document.getElementById("displayBox"); // Reference to the new-box
+
+      // Font size selector for displayBox
+      const displayBoxFontSizeSelect =
+        document.getElementById("displayBoxFontSize");
+
+      // Gauging checkbox
+      const gaugingCheckbox = document.getElementById("gaugingCheckbox");
+
+      // Form input elements
+      const partNameInput = document.getElementById("partName");
+      const partNameColorInput = document.getElementById("partNameColor");
+      const specInput = document.getElementById("spec");
+      const specColorInput = document.getElementById("specColor");
+      const greaseTypeInput = document.getElementById("greaseType");
+      const greaseTypeColorInput = document.getElementById("greaseTypeColor");
+      const wosInput = document.getElementById("wos");
+      const wosColorInput = document.getElementById("wosColor");
+
+      // SPEC error message element
+      const specError = document.getElementById("specError");
+
+      // Insert Button
+      const insertButton = document.getElementById("insertButton");
+
+      // References to the other display boxes (ensure these exist in your HTML)
+      const displayBox2 = document.getElementById("displayBox2");
+      const displayBox3 = document.getElementById("displayBox3");
+      const displayBox4 = document.getElementById("displayBox4");
+
+      /**
+       * Opens the modal form.
+       */
+      function openForm() {
+        formModal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent scrolling on the body
+      }
+
+      /**
+       * Closes the modal form.
+       */
+      function closeForm() {
+        formModal.classList.remove("active");
+        document.body.style.overflow = ""; // Restore scrolling on the body
+      }
+
+      /**
+       * Creates a styled span element.
+       * @param {string} text - The text content for the span.
+       * @param {string} color - The color for the span's text.
+       * @returns {string} The outerHTML of the created span.
+       */
+      function createStyledSpan(text, color) {
+        const span = document.createElement("span");
+        span.textContent = text;
+        span.style.color = color;
+        return span.outerHTML;
+      }
+
+      /**
+       * Updates the font size of the display box based on the selector value.
+       */
+      function updateDisplayBoxFontSize() {
+        displayBox.style.fontSize = displayBoxFontSizeSelect.value;
+        syncOtherDisplayBoxes(); // Sync font size to other boxes
+      }
+
+      /**
+       * Validates the SPEC input field for the presence of "LY".
+       * @returns {boolean} True if validation passes, false otherwise.
+       */
+      function validateSpec() {
+        if (specInput.value.includes("LY")) {
+          specError.style.display = "block"; // Show error message
+          // Optionally change border color for visual feedback
+          specInput.style.borderColor = "#ef4444"; // red-500
+          specInput.style.boxShadow = "0 0 0 2px rgba(239, 68, 68, 0.5)";
+          return false;
+        } else {
+          specError.style.display = "none"; // Hide error message
+          // Restore default border color
+          specInput.style.borderColor = "#a7f3d0"; // green-300
+          specInput.style.boxShadow = "none";
+          return true;
+        }
+      }
+
+      /**
+       * Copies the content and font size from displayBox to displayBox2, 3, and 4.
+       */
+      function syncOtherDisplayBoxes() {
+        const html = displayBox.innerHTML;
+        const fontSize = displayBox.style.fontSize;
+
+        // Loop through the other display boxes and update them
+        [displayBox2, displayBox3, displayBox4].forEach((box) => {
+          if (box) {
+            // Check if the element exists before trying to update it
+            box.innerHTML = html;
+            box.style.fontSize = fontSize;
+          }
+        });
+      }
+
+      /**
+       * Handles the click event for the Insert button.
+       * Combines the values from the 4 boxes with its format into the "displayBox".
+       */
+      function handleInsertClick() {
+        const partNameVal = partNameInput.value.trim();
+        const specVal = specInput.value.trim();
+        const greaseTypeVal = greaseTypeInput.value.trim();
+        const wosVal = wosInput.value.trim();
+
+        // New: Check if gauging is NOT checked AND any field is empty
+        if (
+          !gaugingCheckbox.checked &&
+          (!partNameVal || !specVal || !greaseTypeVal || !wosVal)
+        ) {
+          alert(
+            'Please fill all input fields, or check "GAUGING" to bypass this requirement.'
+          );
+          return; // Stop the function if fields are required and empty
+        }
+
+        if (!validateSpec()) {
+          // If SPEC validation fails, prevent insertion and keep the form open
+          return;
+        }
+
+        const partNameColor = partNameColorInput.value;
+        const specColor = specColorInput.value;
+        const greaseTypeColor = greaseTypeColorInput.value;
+        const wosColor = wosColorInput.value;
+
+        // Clear previous content in the display box
+        displayBox.innerHTML = "";
+
+        let finalDisplayContent = [];
+
+        // PART NAME and its hyphen
+        if (partNameVal) {
+          finalDisplayContent.push(
+            createStyledSpan(partNameVal, partNameColor) +
+              createStyledSpan("-", "white")
+          );
+        }
+
+        // SPEC + GREASE TYPE and its hyphen (no space between SPEC and GREASE TYPE)
+        let specGreaseBlock = "";
+        if (specVal) {
+          specGreaseBlock += createStyledSpan(specVal, specColor);
+        }
+        if (greaseTypeVal) {
+          specGreaseBlock +=
+            createStyledSpan(greaseTypeVal, greaseTypeColor) +
+            createStyledSpan("-", "white");
+        }
+        if (specGreaseBlock) {
+          finalDisplayContent.push(specGreaseBlock);
+        }
+
+        // W.O.S (with parentheses)
+        if (wosVal) {
+          finalDisplayContent.push(createStyledSpan(`(${wosVal})`, wosColor));
+        }
+
+        // Join all segments with no space
+        displayBox.innerHTML = finalDisplayContent.join("");
+
+        // Apply the current font size to the display box after content is set
+        updateDisplayBoxFontSize(); // This will now also trigger syncOtherDisplayBoxes()
+
+        // Close the form after insertion
+        closeForm();
+      }
+
+      // --- Event Listeners ---
+      openFormButton.addEventListener("click", openForm);
+      closeFormButton.addEventListener("click", closeForm);
+      formModal.addEventListener("click", (event) => {
+        // Close modal if clicked outside the content (on the overlay)
+        if (event.target === formModal) {
+          closeForm();
+        }
+      });
+
+      // Add event listener for the new Insert button
+      insertButton.addEventListener("click", handleInsertClick);
+
+      // Add event listener for the display box font size selector
+      displayBoxFontSizeSelect.addEventListener(
+        "change",
+        updateDisplayBoxFontSize
+      );
+
+      // Add input event listener to SPEC field for real-time validation feedback
+      specInput.addEventListener("input", validateSpec);
+
+      // Initial set up for the display box font size and sync
+      updateDisplayBoxFontSize(); // This will call syncOtherDisplayBoxes on load
+      // check box to change sample text
+      const sampleCheckbox = document.getElementById("sampleCheckbox");
+      const typep = document.getElementById("typep");
+      const typep1 = document.getElementById("typep1");
+      const typep2 = document.getElementById("typep2");
+      const typep3 = document.getElementById("typep3");
+      sampleCheckbox.addEventListener(`change`, function () {
+        if (sampleCheckbox.checked) {
+          typep.textContent = "SAMPLE CHROME PART";
+          typep1.textContent = "SAMPLE CHROME PART";
+          typep2.textContent = "SAMPLE CHROME PART";
+          typep3.textContent = "SAMPLE CHROME PART";
+        } else {
+          typep.textContent = "CHROME PART";
+          typep1.textContent = "CHROME PART";
+          typep2.textContent = "CHROME PART";
+          typep3.textContent = "CHROME PART";
+        }
+      });
+    </script>
+  </body>
+</html>
